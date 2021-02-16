@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id= "ola">teste</h1>
+    <div id= "teste"></div>
+    <img id= "imgHora"src="">
+    <script>
+        var corpo = window.document.body
+        var data = new Date()
+        var hora = ("0"+ String(data.getHours())).slice(-2)
+        var minuto = ("0"+String(data.getMinutes())).slice(-2)
+        var horario = `${hora}:${minuto}`    
+        var meses = [
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro"
+];
+        var dia = data.getDate()
+        var mes = meses[data.getMonth()];
+        var ano = data.getFullYear()
+
+        var msgOla = window.document.getElementById("teste")
+        var imgHora = window.document.getElementById("imgHora")
+
+        msgOla.innerText = `${horario} do dia ${dia} de ${mes} do ano de ${ano}`
+        
+        if(hora < 5){
+        corpo.style.backgroundColor = 'grey'
+        imgHora.src = "https://www.oeco.org.br/wp-content/uploads/oeco-migration/images/stories/mai2014/madrugada-beija-flor.jpg"
+        } else if (hora < 12){
+            corpo.style.backgroundColor = 'yellow'
+            imgHora.src = "https://i.pinimg.com/564x/c8/3d/88/c83d88a05fb2bf85ffade84a2c200648.jpg"
+        } else if (hora < 18){
+            corpo.style.backgroundColor = 'orange'
+            imgHora.src = "https://i.pinimg.com/564x/8a/79/c6/8a79c65bcfb5ec5769320777daa83758.jpg"
+        }
+        else{
+            corpo.style.backgroundColor = 'black'
+            corpo.style.color = 'white'
+            imgHora.src = "https://i.pinimg.com/736x/25/18/dc/2518dc84ef3b52aa8dda9bca93421a8d.jpg"
+        }
+        
+    </script>
+</body>
+</html>

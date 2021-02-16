@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de nacionalidade</title>
+    <style>
+        div#res{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual é a sua nacionalidade?</h1>
+    <input type="text" name="txtnacionalidade" id="txtnacionalidade" testedoamor="paixao">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id= "res"></div>
+
+    <script>
+        function enviar(){
+        var nacionalidade = window.document.getElementById("txtnacionalidade").value
+        var resposta = window.document.getElementById("res")
+ //       var nacionalidade = String(txtnac.value)
+
+        console.log(nacionalidade);
+        console.log(typeof nacionalidade)
+        
+        if(nacionalidade == "Brasileiro" || nacionalidade == "brasileiro" || nacionalidade == "BRASILEIRO"){
+            resposta.innerHTML = `Você é <strong>Brasileiro</strong>`
+        } else{
+            resposta.innerHTML = `Você é <strong>Estrangeiro</strong>`
+        }
+    }
+    </script>
+</body>
+</html>

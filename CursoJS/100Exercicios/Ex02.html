@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respondendo o usuário</title>
+</head>
+<body>
+    <h1>Qual é o seu nome?</h1>
+    <input type="text" name="txtnome" id="txtnome">
+    <input type="button" value="enviar" onclick="enviar()">
+    <div id='res'></div>
+    <script>
+        function enviar(){
+        var nome = window.document.getElementById("txtnome").value
+        var res = window.document.getElementById('res')
+
+        res.innerHTML = (`Vai tomar no cu ${nome}`)
+        }
+    </script>
+</body>
+</html>

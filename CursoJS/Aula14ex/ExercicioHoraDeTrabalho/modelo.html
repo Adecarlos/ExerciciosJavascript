@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor do seu Trabalho</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Calcule o valor do seu trabalho</h1>
+    </header>  
+    <section>
+        <div id="msg">
+            <p>Quantas horas por dia você trabalha?
+                <input type="number" name="txthora" id="txthora" value="8">
+            </p>
+            <p>Quantos dias na semana?
+                <input type="number" name="txtdias" id="txtdias" value="5">
+            </p>
+            <p>Qual é o seu salário? R$
+                <input type="number" name="txtsal" id="txtsal" value="1045">
+            </p>
+            <input type="button" value="Verificar" onclick="calcular()">
+        </div>
+        <div id = "res">
+          
+        </div>
+    </section>
+    <footer>
+        <p>&copy; AdecarlosProductions</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de nomes</title>
+</head>
+<body>
+    <h1>Testando</h1>
+    <input type="text" name="primeiroNome" id="primeiroNome">
+    <input type="text" name="segundoNome" id="segundoNome">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id=res>Seu nome:</div>
+    <script>
+        function enviar(){
+            var nomeUm = window.document.getElementById('primeiroNome')
+            var nomeDois = window.document.getElementById('segundoNome')
+            var n1 = String(nomeUm.value)
+            var n2 = String(nomeDois.value)
+            res.innerText = `O seu primero nome é ${n1} e seu sobrenome é ${n2}`
+        }
+    </script>
+</body>
+</html>
